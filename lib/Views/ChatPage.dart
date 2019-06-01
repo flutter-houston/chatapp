@@ -4,48 +4,50 @@ import 'package:flutter_app/Views/BasePage.dart';
 
 class ChatPage extends BasePage {
 
-  final databaseReference = FirebaseDatabase.instance.reference();
+  ChatPage({Key key}):super(key: key, title: 'Chat');
+  @override
+  State<StatefulWidget> createState() => _ChatPageState();
+}
 
+class _ChatPageState extends State<ChatPage> {
+
+  final databaseReference = FirebaseDatabase.instance.reference();
   @override
   Widget build(BuildContext context) {
     getData();
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Firebase Connect'),
-      ),
-      body: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
+    return Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
 
-              RaisedButton(
-                child: Text('Create Record'),
-                onPressed: () {
-                  createRecord();
-                },
-              ),
+            RaisedButton(
+              child: Text('Create Record'),
+              onPressed: () {
+                createRecord();
+              },
+            ),
 
-              RaisedButton(
-                child: Text('View Record'),
-                onPressed: () {
-                  getData();
-                },
-              ),
-              RaisedButton(
-                child: Text('Udate Record'),
-                onPressed: () {
-                  updateData();
-                },
-              ),
-              RaisedButton(
-                child: Text('Delete Record'),
-                onPressed: () {
-                  deleteData();
-                },
-              ),
-            ],
-          )
-      ), //center
+            RaisedButton(
+              child: Text('View Record'),
+              onPressed: () {
+                getData();
+              },
+            ),
+            RaisedButton(
+              child: Text('Udate Record'),
+              onPressed: () {
+                updateData();
+              },
+            ),
+            RaisedButton(
+              child: Text('Delete Record'),
+              onPressed: () {
+                deleteData();
+              },
+            ),
+          ],
+        )
     );
   }
 
