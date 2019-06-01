@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">335530235040-ljr3m6m764mkkk4l11sq0k4bsev6ar6n.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://flutter-hackathon-da706.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">335530235040</string>
+    <string name="google_api_key" translatable="false">AIzaSyCm1hR1RdKNuu0s8Nmd8Sp5PEZiIMaNqww</string>
+    <string name="google_app_id" translatable="false">1:335530235040:android:08c1fcbc881e6ea7</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCm1hR1RdKNuu0s8Nmd8Sp5PEZiIMaNqww</string>
+    <string name="google_storage_bucket" translatable="false">flutter-hackathon-da706.appspot.com</string>
+    <string name="project_id" translatable="false">flutter-hackathon-da706</string>
+</resources>
