@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hnabbasi/Projects/flutter_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
+            "outputFile": "/Users/binhtran/Projects/chatapp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/Users/hnabbasi/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/025c94ed2a3c23ef702499bcc24d6735/res/values-pt/values-pt.xml",
+                    "source": "/Users/binhtran/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e8b4da5e7d805fee1257b6744b930fe0/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

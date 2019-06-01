@@ -1,4 +1,4 @@
-#Sat Jun 01 13:12:43 CDT 2019
-base.0=/Users/hnabbasi/Projects/flutter_app/build/app/intermediates/transforms/dexMerger/debug/0
+#Sat Jun 01 14:32:41 CDT 2019
+base.0=/Users/binhtran/Projects/chatapp/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
