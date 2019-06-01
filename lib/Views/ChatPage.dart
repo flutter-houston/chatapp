@@ -5,6 +5,7 @@ import 'package:flutter_app/Views/ChatMessage.dart';
 
 class ChatPage extends BasePage {
 
+  ChatPage({Key key}):super(key: key, title: 'Chat');
   @override
   State createState() => new ChatScreenState();
 }
@@ -14,14 +15,18 @@ class ChatScreenState extends State<ChatPage> {
   final databaseReference = FirebaseDatabase.instance.reference();
   final TextEditingController _chatController = new TextEditingController();
   final List<ChatMessage> _messages = <ChatMessage>[];
+  var date = DateTime.now().toString();
 
   void _handleSubmit(String text) {
     _chatController.clear();
       ChatMessage message = new ChatMessage(
-        text: text
-    );
+          text: text
+      );
     setState(() {
        _messages.insert(0, message);
+       databaseReference.child(date).set({
+          "date": _messages,
+        });
     });
 
   }
@@ -114,16 +119,6 @@ class ChatScreenState extends State<ChatPage> {
     //     )
     // );
 
-    void createRecord(){
-    databaseReference.child("1").set({
-      'title': 'Mastering EJB',
-      'description': 'Programming Guide for J2EE'
-    });
-    databaseReference.child("2").set({
-      'title': 'Flutter in Action',
-      'description': 'Complete Programming Guide to learn Flutter'
-    });
-  }
   void getData(){
     databaseReference.once().then((DataSnapshot snapshot) {
       print('Data : ${snapshot.value}');
@@ -138,6 +133,14 @@ class ChatScreenState extends State<ChatPage> {
 
   void deleteData(){
     databaseReference.child('1').remove();
+  }
+
+  void createRecord(){
+    // var date = DateTime.now().toString();
+    databaseReference.child(date).set({
+      "timestamp": date,
+      "message" : _messages,
+    });
   }
 
   }
